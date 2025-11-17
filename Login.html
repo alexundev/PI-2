@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Página de Login</title>
+  <meta name="description" content="Página de login responsiva com HTML, CSS" />
+
+  <link rel="stylesheet" href="/Login.css">
+
+</head>
+
+<body>  
+  <div class="login-card" role="main" aria-labelledby="login-title">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">EH</div>
+      <h1 id="login-title">Entrar na sua conta</h1>
+    </div>
+
+    <p class="lead">Acesse com seu e‑mail e senha. Não tem conta? <a href="#" style="color:#f6c85f;text-decoration:none;font-weight:600">Crie agora</a></p>
+
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="email">E‑mail</label>
+        <input id="email" name="email" type="email" inputmode="email" placeholder="seu@exemplo.com" required aria-required="true" />
+        <div id="emailError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field password-wrap">
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password" minlength="6" placeholder="Digite sua senha" required aria-required="true" />
+        <button type="button" class="toggle-pass" aria-controls="password" aria-pressed="false">Mostrar</button>
+        <div id="passwordError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="controls">
+        <label class="remember"><input type="checkbox" id="remember" name="remember"> Lembrar-me</label>
+        <a href="#">Esqueci a senha</a>
+      </div>
+
+      <button type="submit">Entrar</button>
+
+      <div class="divider"><span>ou</span></div>
+
+      <div class="alt-actions" aria-hidden="false">
+        <button type="button" onclick="alert('Login com Google (exemplo)')">Entrar com Google</button>
+        <button type="button" onclick="alert('Entrar com GitHub (exemplo)')">Entrar com GitHub</button>
+      </div>
+
+      <p class="hint">Ao entrar você aceita nossos <a href="#" style="color:#f6c85f">termos</a> e <a href="#" style="color:#f6c85f">política de privacidade</a>.</p>
+    </form>
+  </div>
+
+  <script>
+    // Toggle visual da senha
+    const toggle = document.querySelector('.toggle-pass');
+    const password = document.getElementById('password');
+    toggle.addEventListener('click', () => {
+      const isPass = password.type === 'password';
+      password.type = isPass ? 'text' : 'password';
+      toggle.textContent = isPass ? 'Ocultar' : 'Mostrar';
+      toggle.setAttribute('aria-pressed', String(isPass));
+    });
+
+    // Validação simples do formulário
+    const form = document.getElementById('loginForm');
+    const emailEl = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    function validateEmail(value){
+      // validação simples: presença de @ e .
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let ok = true;
+      emailError.textContent = '';
+      passwordError.textContent = '';
+
+      if(!emailEl.value.trim()){
+        emailError.textContent = 'Preencha o e‑mail.'; ok = false;
+      } else if(!validateEmail(emailEl.value.trim())){
+        emailError.textContent = 'E‑mail inválido.'; ok = false;
+      }
+
+      if(!password.value || password.value.length < 6){
+        passwordError.textContent = 'A senha deve ter ao menos 6 caracteres.'; ok = false;
+      }
+
+      if(!ok) return;
+
+      // Aqui é o fetch para o Backend
+      buttonFeedback('Entrando...');
+      setTimeout(() => {
+        buttonFeedback('Entrar');
+        // Simular sucesso — no mundo real, redirecione ao receber token do backend
+        alert('Login simulado com sucesso — substitua por chamada ao servidor.');
+        form.reset();
+      }, 1100);
+    });
+
+    function buttonFeedback(text){
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = text;
+    }
+
+    // Acessibilidade extra: limpar mensagens de erro ao digitar
+    [emailEl, password].forEach(el => el.addEventListener('input', () => {
+      if(el === emailEl) emailError.textContent = '';
+      if(el === password) passwordError.textContent = '';
+    }));
+  </script>
+</body>
+</html>
