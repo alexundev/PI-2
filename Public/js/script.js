@@ -30,18 +30,18 @@ function generateTimeSlots(dateStr, duration){
 // LocalStorage: armazenar agendamentos
 function getAppointments(){
   try{
-    return JSON.parse(localStorage.getItem('studio_bella_appts')||'[]');
+    return JSON.parse(localStorage.getItem('elite_hair_appts')||'[]');
   }catch(e){return []}
 }
 function saveAppointment(appt){
   const arr = getAppointments();
   arr.push(appt);
-  localStorage.setItem('studio_bella_appts', JSON.stringify(arr));
+  localStorage.setItem('elite_hair_appts', JSON.stringify(arr));
 }
 function removeAppointment(index){
   const arr = getAppointments();
   arr.splice(index,1);
-  localStorage.setItem('studio_bella_appts', JSON.stringify(arr));
+  localStorage.setItem('elite_hair_appts', JSON.stringify(arr));
 }
 
 // Render mini agenda

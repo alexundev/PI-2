@@ -12,21 +12,16 @@
       padding:2rem;
       
     }
-    /*Configurações da imagem png, e garantir que essas configurações afete somente atrás do card login */
-    body::before {
-  content: "";
-  position: fixed;
-  top: -700px;              
-  left: -440px;             
-  width: 2200px;            
+
+.imagem1 {
+  position:relative;
+  top: -267px;              
+  left: -914px;             
+  width: 0px;            
   height: 1750px;           
-  background-image: url("/—Pngtree—salon logo vector_6942006.png");
+  background-image: url("Public/Assets/Images/—Pngtree—salon logo vector_6942006.png");
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: top left;
-  z-index: 0;
-  pointer-events: none;
-  
 }
 
 /* garante que o cartão de login fique acima do fundo */
