@@ -1,108 +1,64 @@
 <!doctype html>
-    <html lang="pt-BR">
-        <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width,initial-scale=1" />
-            <title> Elite Hair - Agende seu horário</title>
-            <meta name="description" content="Agende cortes, coloração e tratamentos com facilidade no Elite Hair." />
-            <style>
-                @import url('Public/css/style.css');
-            </style>
-        </head>
-        <body>
-            <main class="container">
-                        <header>
-                            <div class ="logo">
-                                <img src = "Public/Assets/Images/—Pngtree—salon logo vector_6942006.png">
-                            </div>
-                        <div>
-                            <h1><center>Elite Hair — Agendamento online</h1>
-                            <p class="lead">Corte, coloração, escova e tratamentos. Escolha serviço, data e horário. Confirmação instantânea.</p>
-                        </div>
-                        </header>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Página de Login</title>
+  <meta name="description" content="Página de login responsiva com HTML, CSS" />
+  <style>
+        @import url('Public/css/login.css');
+  </style>
 
-                <section class="grid">
-                <div class="card hair">
-                    <h2>Por que escolher o Elite Hair?</h2>
-                    <p class="small">Profissionais especializados, ambiente acolhedor e horários pensados para você. Atendimento personalizado com produtos premium.</p>
+</head>
 
-                    <div class="services" aria-hidden="false">
-                        <span class="pill">Corte Masculino</span>
-                        <span class="pill">Corte Feminino</span>
-                        <span class="pill">Coloração</span>
-                        <span class="pill">Mechas</span>
-                        <span class="pill">Hidratação</span>
-                        <span class="pill">Escova</span>
-                    </div>
+<body>  
+  <div class = "imagem1">
+    <img src = "Public/Assets/Images/—Pngtree—salon logo vector_6942006.png">
+  </div>
+  <div class="login-card" role="main" aria-labelledby="login-title">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">EH</div>
+      <h1 id="login-title">Entrar na sua conta</h1>
+    </div>
 
-                    <h3 style="margin-top:18px">Como funciona</h3>
-                    <ol style="color:var(--muted)">
-                        <li>Escolha o serviço e a data.</li>
-                        <li>Selecione um horário disponível.</li>
-                        <li>Preencha seus dados e confirme.</li>
-                    </ol>
+    <p class="lead">Acesse com seu e‑mail e senha. Não tem conta? <a href="#" style="color:#f6c85f;text-decoration:none;font-weight:600">Crie agora</a></p>
 
-                    <div style="display:flex;gap:10px;margin-top:18px">
-                        <button class="btn" id="verHorariosBtn">Ver horários disponíveis</button>
-                        <button class="btn secondary" id="verAgendaBtn">Ver minha agenda</button>
-                    </div>
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="email">E‑mail</label>
+        <input id="email" name="email" type="email" inputmode="email" placeholder="seu@exemplo.com" required aria-required="true" />
+        <div id="emailError" class="error" aria-live="polite"></div>
+      </div>
 
-                    <div class="appts card" id="miniAgenda" style="margin-top:16px;display:none">
-                        <strong>Seus agendamentos</strong>
-                    <div id="apptsList"></div>
-                    </div>
+      <div class="field password-wrap">
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password" minlength="6" placeholder="Digite sua senha" required aria-required="true" />
+        <button type="button" class="toggle-pass" aria-controls="password" aria-pressed="false">Mostrar</button>
+        <div id="passwordError" class="error" aria-live="polite"></div>
+      </div>
 
-                </div>
+      <div class="controls">
+        <label class="remember"><input type="checkbox" id="remember" name="remember"> Lembrar-me</label>
+        <a href="#">Esqueci a senha</a>
+      </div>
 
-                    <aside class="card" aria-labelledby="formTitulo">
-                        <h2 id="formTitulo">Agende um horário</h2>
-                        <form id="bookingForm" autocomplete="on">
-                        <label for="service">Serviço</label>
-                        <select id="service" required>
-                            <option value="">— selecione —</option>
-                            <option value="corte">Corte (40 min)</option>
-                            <option value="coloracao">Coloração (90 min)</option>
-                            <option value="mechas">Mechas (120 min)</option>
-                            <option value="hidrata">Hidratação (60 min)</option>
-                            <option value="escova">Escova (45 min)</option>
-                        </select>
+      <a href="index.html">
+        <button type="submit">Entrar</button>
+      </a>
 
-                        <div class="row" style="margin-top:12px">
-                            <div class="half">
-                                <label for="date">Data</label>
-                                <input type="date" id="date" required />
-                            </div>
-                            <div class="half">
-                                <label for="time">Horário</label>
-                                <input type="text" id="time" placeholder="Selecione um horário" readonly aria-readonly="true" />
-                            </div>
-                        </div>
+      <div class="divider"><span>ou</span></div>
 
-                        <div class="times" id="timesContainer" aria-live="polite"></div>
+      <div class="alt-actions" aria-hidden="false">
+        <a href="index.html">
+        <button type="button" onclick= >Entrar com o Google</button>
+        </a>
+      </div>
 
-                            <label for="name" style="margin-top:10px">Nome</label>
-                            <input id="name" type="text" required placeholder="Seu nome completo" />
+      <p class="hint">Ao entrar você aceita nossos <a href="#" style="color:#f6c85f">termos</a> e <a href="#" style="color:#f6c85f">política de privacidade</a>.</p>
+    </form>
+  </div>
+</body>
 
-                            <label for="phone" style="margin-top:10px">Telefone</label>
-                            <input id="phone" type="tel" inputmode="tel" pattern="[0-9()+\-\s]{6,}" placeholder="(00) 9 0000-0000" />
+<script src="Public/js/login.js"></script>
 
-                            <label for="notes" style="margin-top:10px">Observações (opcional)</label>
-                            <textarea id="notes" rows="3" placeholder="Ex.: alergia a algum produto, preferências..."></textarea>
-
-                        <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
-                            <button class="btn" type="submit">Confirmar agendamento</button>
-                            <button class="btn secondary" type="button" id="clearBtn">Limpar</button>
-                        </div>
-
-                        <p class="note">Ao confirmar, você receberá um link para adicionar ao seu calendário e o agendamento ficará salvo localmente (demo).</p>
-                        </form>
-                    </aside>
-                </section>
-
-                <footer>
-                    <small>© Elite Hair — Demo. Não é um sistema real de pagamento.</small>
-                </footer>
-            </main>
-        </body>
-        <script src="Public/js/script.js"></script>
-    </html>
+</html>
