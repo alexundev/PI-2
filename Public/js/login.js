@@ -43,7 +43,7 @@
         buttonFeedback('Entrar');
         // Simular sucesso — no mundo real, redirecione ao receber token do backend
         alert('Login bem‑sucedido!');
-        window.location.assign("/schedule/main.html");
+        window.location.assign("../schedule/main.html");
       }, 1100);
     });
 
