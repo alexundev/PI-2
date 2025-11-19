@@ -1,17 +1,26 @@
 /* Reset simples */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,#0f172a 0%, #0b1220 50%, #001827 100%); 
-      background-color: #001827;
-      color:#edf1f5;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:2rem;
-      
-    }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html,body{
+  height:100%
+}
+
+body{
+  font-family:'SF Pro Display',sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#0f172a 0%, #0b1220 50%, #001827 100%); 
+  background-color: #001827;
+  color:#edf1f5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:2rem;
+}
 
 .imagem1 {
   position:relative;
@@ -34,67 +43,244 @@
 }
 
 
-    /* Card */
-    .login-card{
-      width:100%;max-width:420px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border-radius:14px;padding:2rem;border:1px solid rgba(255,255,255,0.04);
-      box-shadow:0 10px 30px rgba(2,6,23,0.6);
-    }
+/* Card */
+.login-card{
+  width:100%;
+  max-width:420px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:2rem;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
 
-    .brand{
-      display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem
-    }
-    /* Config do botão EH*/
-    .brand .logo{
-      height:48px;width:48px;border-radius:10px;background:linear-gradient(135deg,#b0892d,#eadc9b);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:#08111a
-    }
-    .brand h1{font-size:1.125rem;letter-spacing:0.2px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin-bottom:1.25rem
+}
+    
+/* Config do botão EH*/
+.brand .logo{
+  height:48px;
+  width:48px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#b0892d,#eadc9b);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#08111a
+}
 
-    p.lead{color:rgba(230,238,248,0.85);margin-bottom:1rem}
+.brand h1{
+  font-size:1.125rem;
+  letter-spacing:0.2px
+}
 
-    form{display:block}
-    .field{
-      margin-bottom:0.85rem;display:flex;flex-direction:column;gap:.45rem
-    }
-    label{font-size:.85rem;color:rgba(230,238,248,0.8)}
-    input[type="email"], input[type="password"]{
-      width:100%;padding:.85rem .9rem;border-radius:10px;border:1px solid rgba(255,255,255,0.06);
-      background:rgba(10,14,22,0.55);color:inherit;font-size:0.95rem;outline:none;transition:box-shadow .15s,border-color .15s
-    }
-    input:focus{box-shadow:0 6px 18px rgba(2,6,23,0.6);border-color:rgba(246,200,95,0.35)}
+p.lead{
+    color:rgba(230,238,248,0.85);
+    margin-bottom:1rem
+}
 
-    .controls{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
-    .controls .remember{display:flex;align-items:center;gap:.45rem;font-size:.9rem;color:rgba(230,238,248,0.8)}
-    .controls a{color:#f6c85f;text-decoration:none;font-weight:600}
+form{
+    display:block
+}
+    
+.field{
+      margin-bottom:0.85rem;
+      display:flex;
+      flex-direction:column;
+      gap:.45rem
+}
 
-    /* Config do Botão Entrar*/
-    button[type="submit"]{
-      width:100%;padding:.9rem;border-radius:10px;border:0;background:linear-gradient(90deg,#b0892d,#eadc9b);
-      color:#08111a;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 8px 22px rgba(217,154,43,0.16);
-      transition:transform .12s ease,box-shadow .12s ease
-    }
-    button[type="submit"]:active{transform:translateY(1px)}
+label{
+  font-size:.85rem;
+  color:rgba(230,238,248,0.8)
+}
 
-    .divider{display:flex;align-items:center;gap:.5rem;margin:1rem 0}
-    .divider::before,.divider::after{content:"";flex:1;height:1px;background:rgba(255,255,255,0.03)}
-    .divider span{font-size:.85rem;color:rgba(230,238,248,0.6)}
+input[type="email"], input[type="password"]{
+  width:100%;
+  padding:.85rem .9rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(10,14,22,0.55);
+  color:inherit;
+  font-size:0.95rem;
+  outline:none;
+  transition:box-shadow .15s,border-color .15s
+}
 
-    .alt-actions{display:flex;gap:.75rem;justify-content:center}
-    .alt-actions button{flex:1;padding:.6rem;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;cursor:pointer}
+input[type="text"]{
+  width:100%;
+  padding:.85rem .9rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(10,14,22,0.55);
+  color:inherit;
+  font-size:0.95rem;
+  outline:none;
+  transition:box-shadow .15s,border-color .15s
+}
 
-    .hint{font-size:.85rem;color:rgba(230,238,248,0.7);margin-top:.8rem;text-align:center}
+input:focus{
+  box-shadow:0 6px 18px rgba(2,6,23,0.6);
+  border-color:rgba(246,200,95,0.35)
+}
 
-    /* Pequenas telas */
-    @media (max-width:480px){
-      .login-card{padding:1.25rem;border-radius:12px}
-      .brand h1{font-size:1rem}
-    }
+.controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:1rem
+}
+  
+.controls .remember{
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  font-size:.9rem;
+  color:rgba(230,238,248,0.8)
+}
 
-    /* estilos de erro */
-    .error{color:#ffcccb;font-size:.85rem;margin-top:.35rem}
+.controls a{
+  color:#f6c85f;
+  text-decoration:none;
+  font-weight:600
+}
 
-    /* auxiliar para alternar senha */
-    .password-wrap{position:relative}
-    .toggle-pass{position:absolute;right:.6rem;top:50%;transform:translateY(-50%);background:none;border:0;cursor:pointer;font-size:.9rem;color:rgba(230,238,248,0.65)}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Config do Botão Entrar*/
+button[type="submit"]{
+  width:100%;
+  padding:.9rem;
+  border-radius:10px;
+  border:0;
+  background:linear-gradient(90deg,#b0892d,#eadc9b);
+  color:#08111a;
+  font-weight:700;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(217,154,43,0.16);
+  transition:transform .12s ease,box-shadow .12s ease
+}
+
+button[type="submit"]:active{
+  transform:translateY(1px)
+}
+
+/* Config do Botão Google*/
+.google{
+  width:100%;
+  padding:.9rem;
+  border-radius:10px;
+  border:0;
+  color:#FFFFFF;
+  font-weight:700;
+  font-size:0.9rem;
+  cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease
+}
+
+.google-logo{
+  width:18px;
+  height:18px;
+  vertical-align:middle;
+  margin-right:8px;
+}
+
+a, a:hover, a:visited, a:active{
+  text-decoration:none;
+  color:inherit;
+  text-decoration: none;
+}
+
+.divider{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  margin:1rem 0
+}
+    
+.divider::before,.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:rgba(255,255,255,0.03)
+}
+
+.divider span{
+  font-size:.85rem;
+  color:rgba(230,238,248,0.6)
+}
+
+.alt-actions{
+  display:flex;
+  gap:.75rem;
+  justify-content:center
+}
+    
+.alt-actions button{flex:1;
+  padding:.6rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:transparent;
+  color:inherit;
+  cursor:pointer
+}
+
+    
+.hint{
+  font-size:.85rem;
+  color:rgba(230,238,248,0.7);
+  margin-top:.8rem;
+  text-align:center
+}
+
+/* Pequenas telas */
+@media (max-width:480px){
+      
+  .login-card{
+    padding:1.25rem;
+    border-radius:12px
+  }
+      
+  .brand h1{
+    font-size:1rem
+  }
+}
+
+/* estilos de erro */
+.error{
+  color:#ffcccb;
+  font-size:.85rem;
+  margin-top:.35rem
+}
+
+/* auxiliar para alternar senha */
+.password-wrap{
+  position:relative
+}
+.toggle-pass{
+  position:absolute;
+  right:.6rem;
+  top:50%;
+  transform:translateY(-20%);
+  background:none;
+  border:0;
+  cursor:pointer;
+  font-size:.9rem;
+  color:rgba(230,238,248,0.65)
+}
+    
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}

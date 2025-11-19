@@ -1,40 +1,194 @@
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#B0892D;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui, -apple-system, BlinkMacSystemFont;background:linear-gradient(180deg,#071023 0%,#071727 60%);color:#e6eef8;line-height:1.4}
-    .container{max-width:1100px;margin:36px auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{width:4px;height:4px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#082032};
-    h1{margin:0;font-size:1.6rem}
-    p.lead{color:var(--muted);margin:6px 0 24px}
-    .grid{display:grid;grid-template-columns:1fr 420px;gap:28px}
-    @media(max-width:880px){.grid{grid-template-columns:1fr;padding:0}.container{padding:16px}}
+    :root{
+        --bg:#0f1724;
+        --card:#0b1220;
+        --accent:#B0892D;
+        --muted:#94a3b8;
+        --glass:rgba(255,255,255,0.04)
+    }
+
+    *{
+        box-sizing:border-box
+    }
+    
+    body{
+        margin:0;
+        font-family:'SF Pro Display', sans-serif;
+        background:linear-gradient(180deg,#071023 0%,#071727 60%);
+        color:#e6eef8;
+        line-height:1.4
+    }
+    
+    .container{
+        max-width:1100px;
+        margin:36px auto;
+        padding:24px}
+
+    header{
+        display:flex;
+        align-items:center;
+        gap:16px}
+
+    .logo{
+        width:4px;
+        height:4px;
+        border-radius:12px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-weight:700;
+        color:#082032};
+
+    h1{
+        margin:0;
+        font-size:1.6rem
+    }
+
+    p.lead{
+        color:var(--muted);
+        margin:6px 0 24px
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns:1fr 420px;gap:28px
+    }
+        
+    @media(max-width:880px){
+        .grid{grid-template-columns:1fr;
+            padding:0}
+        
+        .container{
+            padding:16px}
+    }
 
     /* Card */
-    .card{background:var(--card);border-radius:20px;padding:20px;box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .card{
+        background:var(--card);
+        border-radius:20px;
+        padding:20px;
+        box-shadow:0 6px 24px rgba(2,6,23,0.6);
+        border:1px solid rgba(255,255,255,0.03)
+    }
 
     /* Esquerda */
-    .hair{padding:28px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent); backdrop-filter: blur(6px);}
-    .services{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .pill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:0.95rem}
+    .hair{
+        padding:28px;
+        border-radius:12px;
+        background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);
+        backdrop-filter: blur(6px);
+    }
+    
+    .services{
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+        margin-top:12px
+    }
+    
+    .pill{
+        background:var(--glass);
+        padding:8px 12px;
+        border-radius:999px;
+        color:var(--muted);
+        font-size:0.95rem
+    }
 
     /* Direita / form */
-    form label{display:block;font-size:0.85rem;color:var(--muted);margin-bottom:6px}
-    input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-    .row{display:flex;gap:10px}
-    .row .half{flex:1}
-    .btn{display:inline-block;padding:12px 16px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#EADC9B);color:#02121b;font-weight:600;cursor:pointer}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#DBC094}
-    .times{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .times button{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;cursor:pointer}
-    .times button.active{outline:2px solid rgba(225,29,72,0.18);background:rgba(225,29,72,0.06)}
-    .note{font-size:0.85rem;color:var(--muted);margin-top:10px}
+    form label{
+        display:block;
+        font-size:0.85rem;
+        color:var(--muted);
+        margin-bottom:6px
+    }
+
+    input,select,textarea{
+        width:100%;
+        padding:10px;
+        border-radius:8px;
+        border:1px solid rgba(255,255,255,0.04);
+        background:transparent;color:inherit
+    }
+    
+    .row{
+        display:flex;
+        gap:10px
+    }
+
+    .row .half{
+        flex:1
+    }
+    
+    .btn{
+        display:inline-block;
+        padding:12px 16px;
+        border-radius:10px;
+        border:0;
+        background:linear-gradient(90deg,var(--accent),#EADC9B);
+        color:#02121b;
+        font-weight:600;
+        cursor:pointer
+    }
+    
+    .btn.secondary{
+        background:transparent;
+        border:1px solid rgba(255,255,255,0.06);
+        color:#DBC094
+    }
+
+    .times{
+        display:flex;
+        gap:8px;
+        flex-wrap:wrap;
+        margin-top:10px
+    }
+
+    .times button{
+        padding:8px 10px;
+        border-radius:8px;
+        border:1px solid rgba(255,255,255,0.03);
+        background:transparent;
+        color:inherit;
+        cursor:pointer
+    }
+
+    .times button.active{
+        outline:2px solid rgba(225,29,72,0.18);
+        background:rgba(225,29,72,0.06)
+    }
+
+    .note{
+        font-size:0.85rem;color:var(--muted);
+        margin-top:10px
+    }
 
     /* appointments list */
-    .appts{margin-top:12px}
-    .appt{display:flex;justify-content:space-between;padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);margin-bottom:8px}
-    .small{font-size:0.85rem;color:var(--muted)}
+    .appts{
+        margin-top:12px
+    }
 
-    footer{margin-top:18px;color:var(--muted);font-size:0.85rem;text-align:center}
+    .appt{
+        display:flex;
+        justify-content:space-between;
+        padding:10px;
+        border-radius:8px;
+        background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);
+        margin-bottom:8px
+    }
+
+    .small{
+        font-size:0.85rem;
+        color:var(--muted)
+    }
+
+    footer{
+        margin-top:18px;
+        color:var(--muted);
+        font-size:0.85rem;
+        text-align:center
+    }
 
     /* accessibility focus */
-    button:focus,input:focus,select:focus,textarea:focus{outline:3px solid rgba(99,102,241,0.12);outline-offset:2px}
+    button:focus,input:focus,select:focus,textarea:focus{
+        outline:3px solid rgba(99,102,241,0.12);
+        outline-offset:2px
+    }
